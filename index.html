@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karas Romany - Portfolio</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f9; 
+            color: #333; 
+        }
+        header { 
+            background-color: #0f172a; 
+            color: white; 
+            text-align: center; 
+            padding: 2.5rem 1rem; 
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 2.2rem; 
+        }
+        header p { 
+            margin-top: 0.5rem; 
+            color: #94a3b8; 
+            font-size: 1.1rem; 
+        }
+        section { 
+            padding: 2rem; 
+            max-width: 800px; 
+            margin: 1.5rem auto; 
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+        }
+        h2 { 
+            color: #0f172a; 
+            border-bottom: 2px solid #e2e8f0; 
+            padding-bottom: 0.5rem; 
+        }
+
+        
+        .skills-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        
+        .flip-card {
+            background-color: transparent;
+            width: 180px;
+            height: 120px;
+            perspective: 1000px; 
+        }
+
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        
+        .flip-card-front {
+            background-color: #2563eb;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        
+        .flip-card-back {
+            background-color: #0f172a;
+            color: #38bdf8;
+            transform: rotateY(180deg);
+            font-size: 0.95rem;
+        }
+        
+        .flip-card-back p {
+            margin: 5px 0 0 0;
+            color: #f8fafc;
+            font-size: 0.85rem;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Karas Romany Rateb</h1>
+        <p>Frontend Developer</p>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Motivated Computer Science student and aspiring Frontend Developer passionate about building responsive web applications with interactive UI elements.</p>
+    </section>
+
+    <section>
+        <h2>Skills (Hover over cards)</h2>
+        <div class="skills-container">
+
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        HTML5
+                    </div>
+                    <div class="flip-card-back">
+                        <strong>Markup</strong>
+                        <p>Semantic structure & Web Accessibility</p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        CSS3
+                    </div>
+                    <div class="flip-card-back">
+                        <strong>Styling</strong>
+                        <p>Flexbox, Grid & 3D Animations</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        JavaScript
+                    </div>
+                    <div class="flip-card-back">
+                        <strong>Logic</strong>
+                        <p>DOM Manipulation & Interactivity</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
